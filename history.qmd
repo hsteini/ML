@@ -1,0 +1,21 @@
+---
+title: "history"
+format: html
+editor: visual
+---
+
+## git init
+
+git add Readme.md
+
+git commit -m "commit"
+
+git branch -M main
+
+git remote set-url origin git\@github
+
+.com:hsteini/ML.git
+
+ssh -T git\@github.com
+
+git push -u origin main
