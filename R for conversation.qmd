@@ -1,0 +1,86 @@
+---
+title: "R for conservation"
+format: html
+editor: visual
+---
+
+## 
+
+```{r}
+library("remotes")
+install_github("NathanWhitmore/condev")
+library("condev")
+
+data(package = "condev")
+
+data(demo1)
+```
+
+ggplot2 graphing with the tidyverse
+
+```{r}
+library(tidyverse)
+ggplot()+
+  geom_point(data = demo1, aes(x = x, y = y))
+
+
+
+
+
+```
+
+```{r}
+ggplot()+
+  geom_text(data = demo1, aes(x = x, y = y, label = group1))
+```
+
+```{r}
+
+ggplot()+
+  geom_line(data = demo1, aes(x = x, y = y))
+```
+
+### Anzeige der Anzahl der Variablen x in jeder Kategorie
+
+```{r}
+table(demo1$group1)
+```
+
+```{r}
+ggplot()+
+  geom_bar(data = demo1, aes(x = group1))
+```
+
+#### Anzeige der Summe von y für jede Kategorie 
+
+```{r}
+library(dplyr)
+
+demo_sum <- demo1 %>%
+  group_by(group1) %>%
+  summarise(
+    anzahl = n(),
+    gesamtwert_x = sum(x, na.rm = TRUE),
+    gesamtwert_y = sum(y, na.rm = TRUE)
+  )
+
+```
+
+```{r}
+ggplot(demo_sum, aes(x = group1, y = gesamtwert_y)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = gesamtwert_y), vjust = -0.5) +
+  theme_minimal()
+           
+```
+
+
+```{r}
+ggplot() +
+  geom_bar(data = demo1, aes(x = group1, fill = group2))
+           
+```
+
+
+
+
