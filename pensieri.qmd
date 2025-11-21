@@ -4,23 +4,64 @@ format: html
 editor: visual
 ---
 
-## Quarto
+## 
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+### ML
 
-## Running Code
+Wie funktioniert programmieren?
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Wie funktioniert ein Spamfilter?
 
-```{r}
-1 + 1
-```
+Es lernt durch 1000de Spammails
 
-You can add options to executable code like this
+This is called **Machine Learning**: the science of enabling computers to learn from data.
 
-```{r}
-#| echo: false
-2 * 2
-```
+The system learns from **millions of labeled examples**, identifying patterns like suspicious phrases ("You've won!", "Act now!"), sender reputation, and formatting that distinguish spam from legitimate mail.
 
-The `echo: false` option disables the printing of code (only output is displayed).
+For each incoming email, it **matches content against these patterns** to calculate a spam score and filter accordingly.
+
+AI verwendet Mustererkennung.
+
+Mit ML kann man Probleme lösen, die man mit traditioneller Programmierung nicht lösen kann.
+
+### LLM
+
+AI could **understand and communicate in natural language**
+
+Wieso passierte es in 2022 - welche drei Dinge ermöglichten es?
+
+**(1) Machine Learning Advances**: Groundbreaking technical breakthroughs that picked up around 2012 and accelerated dramatically over the following years. You can see this explosion in the research publications here.
+
+**(2) Massive Datasets**: The internet era created vast collections of text, images, and data that AI systems could learn from.
+
+**(3) Powerful Hardware**: GPUs—originally built for video games—made it possible to handle the massive computational workloads required to train large AI models.
+
+![](images/clipboard-1090451977.png)
+
+![](images/clipboard-4137227011.png)
+
+![](images/clipboard-2678929909.png)
+
+Die Sonne geht im \_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Die Hauptstadt von Griechenland ist \_\_\_\_\_\_\_\_\_\_\_\_\_
+
+Das Modell kann
+
+-   Grammatik und Sprachstruktur
+
+-   hat ein Wissen über die Welt - zB Paris liegt in Frankreich
+
+-   kann Schlußfolgerungen durchführen
+
+nix is 100%ig richtig
+
+falsche Inhalte - abhängig von den Trainingsdaten
+
+RLHF's main purpose is to **teach the model to be helpful, safe, and aligned with human preferences**. Specifically, it helps the model:
+
+**Follow instructions** reliably
+
+**Provide helpful and appropriate responses**
+
+**Decline harmful or inappropriate requests**
